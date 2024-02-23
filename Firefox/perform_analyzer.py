@@ -145,11 +145,10 @@ def analyze_ec2_mult():
             all_over_list[e[-1]]['vanilla'].append(e[1])
 
 
-    # print("uo")
-    # 0 -> proactive, 1 -> in place
     mother_list = {
         "all": all_over_list,
         "vanatge": vantage_to_meta_lst
     }
+
     with open("ec2_overhead/ec2_overheadall_meta_cdn_wise.json", "w") as ouf:
         json.dump(mother_list, fp=ouf)
